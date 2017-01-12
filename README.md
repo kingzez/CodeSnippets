@@ -21,3 +21,13 @@ function getArray(a) {
 
 getArray(arr); // 输出[1， 2， 3， 4， 5， 6]
 ```
+2.ES6的set数据结构
+```
+var arr = [1, 2, 2, 3, 4, 5, 6, 6, "10", "10"];
+function getArray(arr){
+  var sets = new Set(arr);
+  return Array.from(sets);
+}
+getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
+
+```

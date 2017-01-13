@@ -31,3 +31,38 @@ function getArray(arr){
 getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
 
 ```
+3.原型定义方法
+```
+		var a = [5,8,5,9,12,15,1,1,3,4,5,"4","4"];
+
+		Array.prototype.unique = function() {
+
+			var temp = []; //临时数组
+
+			//查找元素下标函数
+			function search(item) {
+				var index = -1;
+
+				for (var i = 0;i < temp.length;i ++) {
+					if (item === temp[i]) {
+						index = i;
+						break;
+					}
+				}
+
+				return index;
+			}
+
+			//遍历当前数组，把不重复的值加到临时数组中
+			for (var i = 0;i < this.length;i ++){
+				if (search(this[i]) == -1) {
+					temp.push(this[i]);
+				}
+			}
+
+			return temp;
+		}
+
+		a = a.unique();
+		alert(a);
+```

@@ -22,27 +22,29 @@ function getArray(a) {
 getArray(arr); // 输出[1， 2， 3， 4， 5， 6]
 ```
 2.ES6方法
-	2.1 set数据结构与Array.from()
-	```
-	var arr = [1, 2, 2, 3, 4, 5, 6, 6, "10", "10"];
-	function getArray(arr){
-	  var sets = new Set(arr);
-	  return Array.from(sets);
-	}
-	getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
 
-	```
+- 2.1 set数据结构与Array.from()
 
-	2.2 set数据结构与扩展运算符(...)
-	```
-	var arr = [1, 2, 2, 3, 4, 5, 6, 6, "10", "10"];
-	function getArray(arr){
-	  var sets = new Set(arr);
-	  return [...sets];
-	}
-	getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
+```
+var arr = [1, 2, 2, 3, 4, 5, 6, 6, "10", "10"];
+function getArray(arr){
+  var sets = new Set(arr);
+  return Array.from(sets);
+}
+getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
 
-	```
+```
+
+- 2.2 set数据结构与扩展运算符(...)
+```
+var arr = [1, 2, 2, 3, 4, 5, 6, 6, "10", "10"];
+function getArray(arr){
+  var sets = new Set(arr);
+  return [...sets];
+}
+getArray(arr); // 输出[1, 2, 3, 4, 5, 6, "10"]
+
+```
 3.原型定义方法
 ```
 		var a = [5,8,5,9,12,15,1,1,3,4,5,"4","4"];
